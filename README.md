@@ -1,4 +1,4 @@
-# flutter_application_1
+# flutter_loan_app
 
 A new Flutter project.
 
