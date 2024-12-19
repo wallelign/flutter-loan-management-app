@@ -20,7 +20,6 @@ class LoanNotifier extends StateNotifier<List<Loan>> {
     state = [...state, loan];
   }
 
-  // Repays a loan at the given index.
   void repayLoan(int index, double repaymentAmount) {
     final loan = state[index];
     loan.repay(repaymentAmount);

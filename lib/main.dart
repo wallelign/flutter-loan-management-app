@@ -6,11 +6,10 @@ import 'loan_dashboard.dart';
 
 void main() async {
   await Hive.initFlutter();
-  Hive.registerAdapter(
-      LoanAdapter()); // Register the Hive adapter for the Loan model.
-  await Hive.openBox<Loan>('loans'); // Open a Hive box to store loans.
+  Hive.registerAdapter(LoanAdapter());
+  await Hive.openBox<Loan>('loans');
 
-  runApp(const ProviderScope(child: MyApp())); // Initialize Riverpod.
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Loan Application',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const LoanDashboard(), // Start with the dashboard.
+      home: const LoanDashboard(),
     );
   }
 }

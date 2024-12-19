@@ -14,24 +14,20 @@ class LoanDashboard extends ConsumerWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Center(
-          // Align the text to the center
           child: Text(
             'Loan Dashboard',
             style: TextStyle(
-              color: Colors.white, // Set the text color to white
-              fontSize: 20.0, // Adjust font size if needed
-              fontWeight: FontWeight.bold, // Make the text bold
+              color: Colors.white,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
             ),
-            textAlign:
-                TextAlign.center, // Ensure text is aligned center if needed
+            textAlign: TextAlign.center,
           ),
         ),
         actions: [
           IconButton(
             icon: const Icon(Icons.history),
-            onPressed: () {
-              // Navigate to history screen (not yet implemented).
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -80,11 +76,9 @@ class LoanDashboard extends ConsumerWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          // Check if there are active loans
           final hasUnpaidLoan = loans.any((loan) => loan.status == 'Active');
 
           if (hasUnpaidLoan) {
-            // Show a message if a loan is not fully repaid
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Text('First pay the previous loan!'),

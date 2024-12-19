@@ -14,26 +14,23 @@ class LoanFormScreen extends ConsumerWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
-          color: Colors.white, // Change back arrow color to white
+          color: Colors.white,
         ),
         title: const Center(
-          // Align the text to the center
           child: Text(
             'New Loan',
             style: TextStyle(
-              color: Colors.white, // Set the text color to white
-              fontSize: 20.0, // Adjust font size if needed
-              fontWeight: FontWeight.bold, // Make the text bold
+              color: Colors.white,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
             ),
-            textAlign: TextAlign.center, // Ensure text is aligned center
+            textAlign: TextAlign.center,
           ),
         ),
         actions: [
           IconButton(
             icon: const Icon(Icons.history),
-            onPressed: () {
-              // Navigate to history screen (not yet implemented).
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -46,11 +43,11 @@ class LoanFormScreen extends ConsumerWidget {
               decoration: const InputDecoration(
                 labelText: 'Loan Amount',
                 labelStyle: TextStyle(
-                  color: Colors.grey, // Set label text color
+                  color: Colors.grey,
                 ),
               ),
               keyboardType: TextInputType.number,
-              textAlign: TextAlign.center, // Align input text to the center
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             TextField(
@@ -58,7 +55,7 @@ class LoanFormScreen extends ConsumerWidget {
               decoration: const InputDecoration(
                 labelText: 'Duration (months)',
                 labelStyle: TextStyle(
-                  color: Colors.grey, // Set label text color
+                  color: Colors.grey,
                 ),
               ),
               keyboardType: TextInputType.number,

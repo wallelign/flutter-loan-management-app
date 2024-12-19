@@ -1,20 +1,19 @@
 import 'package:hive/hive.dart';
 
-part 'loan.g.dart'; // This is the file that will be auto-generated.
+part 'loan.g.dart';
 
 @HiveType(typeId: 0)
 class Loan {
   @HiveField(0)
-  final double amount; // Total loan amount.
+  final double amount;
 
   @HiveField(1)
-  final int duration; // Loan duration in months.
+  final int duration;
 
   @HiveField(2)
-  double remainingAmount; // Remaining loan amount to be repaid.
-
+  double remainingAmount;
   @HiveField(3)
-  String status; // Loan status: 'Active' or 'Paid'.
+  String status;
 
   Loan({required this.amount, required this.duration})
       : remainingAmount = amount,
